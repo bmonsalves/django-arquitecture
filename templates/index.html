@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>django arquitecture</title>
+        {# Cargamos la librería #}
+          {% load bootstrap4 %}
+
+          {# CSS Bootstrap #}
+          {% bootstrap_css %}
+
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+
+    {# JS y jQuery Bootstrap #}
+      {% bootstrap_javascript jquery='full' %}
+
+    <div class="container mt-5 mb-5">
+        {% block content %}{% endblock %}
+    </div>
+    </body>
+</html>

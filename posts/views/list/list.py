@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from datetime import datetime
-from django.core import serializers
 
 posts = [
     {
@@ -35,7 +34,7 @@ posts = [
 
 
 def list_html_posts(request):
-    return render(request, 'list/list.html', {posts: posts})
+    return render(request, 'list/list.html', {'posts': posts})
 
 
 def list_json_posts(request):
