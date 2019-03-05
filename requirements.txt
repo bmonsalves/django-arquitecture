@@ -1,2 +1,4 @@
 PyYAML
 django-bootstrap4
+django_dotenv
+psycopg2
