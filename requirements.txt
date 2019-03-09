@@ -2,3 +2,5 @@ PyYAML
 django-bootstrap4
 django_dotenv
 psycopg2
+psycopg2-binary
+pillow
