@@ -17,6 +17,7 @@ from django.urls import path
 from .views.login import login
 from .views.logout import logout
 from .views.signup import signup
+from .views.profile import update
 
 urlpatterns = [
     path('login/', login.login_view, name='user_login'),
@@ -27,4 +28,8 @@ urlpatterns = [
 
     path('signup/', signup.signup, name='user_signup'),
     path('signup/json/', signup.signup_json, name='user_signup_json'),
+
+    path('profile/', update.update, name='user_profile'),
+    path('profile/json', update.update_json, name='user_profile_json'),
+
 ]
