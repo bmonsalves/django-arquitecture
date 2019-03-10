@@ -16,10 +16,15 @@ Including another URLconf
 from django.urls import path
 from .views.login import login
 from .views.logout import logout
+from .views.signup import signup
 
 urlpatterns = [
     path('login/', login.login_view, name='user_login'),
     path('login/json/', login.login_json, name='user_login_json'),
+
     path('logout/', logout.logout_view, name='user_logout'),
     path('logout/json/', logout.logout_json, name='user_logout_json'),
+
+    path('signup/', signup.signup, name='user_signup'),
+    path('signup/json/', signup.signup_json, name='user_signup_json'),
 ]
