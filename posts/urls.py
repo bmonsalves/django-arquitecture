@@ -16,6 +16,6 @@ Including another URLconf
 from django.urls import path
 from .views.list import list
 urlpatterns = [
-    path('', list.list_html_posts),
-    path('json', list.list_json_posts),
+    path('', list.list_html_posts, name='posts_list'),
+    path('json', list.list_json_posts, name='posts_json'),
 ]

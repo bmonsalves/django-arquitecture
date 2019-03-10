@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
 posts = [
@@ -33,9 +34,11 @@ posts = [
 ]
 
 
+@login_required
 def list_html_posts(request):
     return render(request, 'list/list.html', {'posts': posts})
 
 
+@login_required
 def list_json_posts(request):
     return JsonResponse(posts, safe=False)
