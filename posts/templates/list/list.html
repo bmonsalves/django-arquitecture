@@ -1,10 +1,11 @@
 {% extends "index.html" %}
-
 {% block head_content %}
     <title>Contenido</title>
 {% endblock head_content %}
 
 {% block content %}
+    <a href="{% url 'user_logout' %}">Cerrar sesion</a>
+
     <h1>test</h1>
     {% for post in posts %}
         <p>{{ posts }}</p>
